@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Transactions;
 
 namespace MyApp
 {
@@ -7,21 +8,21 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
-            // string fullName = "Nguyen Cong Trinh Do";
-            string firtName = Console.ReadLine();
-            string lastName = Console.ReadLine();
-            string fullName = firtName + " " + lastName;
-            Console.WriteLine("Enter your age:");
-            int age = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Your age is: " + age);
-            Console.WriteLine("Hello, " + fullName);
-            const int myGradeInt = 10;
-            // const double myGradeDouble = myGradeInt;
-            Console.WriteLine("My grade is: " + Convert.ToDouble(myGradeInt));
+            // // string fullName = "Nguyen Cong Trinh Do";
+            // string firtName = Console.ReadLine();
+            // string lastName = Console.ReadLine();
+            // string fullName = firtName + " " + lastName;
+            // Console.WriteLine("Enter your age:");
+            // int age = Convert.ToInt32(Console.ReadLine());
+            // Console.WriteLine("Your age is: " + age);
+            // Console.WriteLine("Hello, " + fullName);
+            // const int myGradeInt = 10;
+            // // const double myGradeDouble = myGradeInt;
+            // Console.WriteLine("My grade is: " + Convert.ToDouble(myGradeInt));
 
-            Console.WriteLine(fullName.IndexOf("Cong"));
-            Console.WriteLine(fullName.LastIndexOf("n"));
-            Console.WriteLine(fullName.Substring(7, 4));
+            // Console.WriteLine(fullName.IndexOf("Cong"));
+            // Console.WriteLine(fullName.LastIndexOf("n"));
+            // Console.WriteLine(fullName.Substring(7, 4));
             // Console.WriteLine(fullName.Substring(fullName.IndexOf("Cong")));
 
 
@@ -55,6 +56,19 @@ namespace MyApp
                     Console.WriteLine(numbers[i, j]);
                 }
             }
+
+            PrintHello();
+            PrintRandom("Trinh Do");
+        }
+
+        static void PrintHello()
+        {
+            Console.WriteLine("Hello World!");
+        }
+
+        static void PrintRandom(string message, string defaultString = "Nguyen Cong ")
+        {
+            Console.WriteLine("Hello " + defaultString + message);
         }
     }
 }
