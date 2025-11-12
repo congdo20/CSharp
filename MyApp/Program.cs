@@ -6,6 +6,28 @@ namespace MyApp
 {
     class Program
     {
+
+
+        static void PrintHello()
+        {
+            Console.WriteLine("Hello World!");
+        }
+
+        static void PrintRandom(string message, string defaultString = "Nguyen Cong ")
+        {
+            Console.WriteLine("Hello " + defaultString + message);
+        }
+
+        static int Sum(int a, int b)
+        {
+            return a + b;
+        }
+
+        static double Sum(double a, double b)
+        {
+            return a + b;
+        }
+
         static void Main(string[] args)
         {
             // // string fullName = "Nguyen Cong Trinh Do";
@@ -58,18 +80,17 @@ namespace MyApp
             }
 
             PrintHello();
-            PrintRandom("Trinh Do");
+            PrintRandom(defaultString: "Nguyen Cong", message: "Trinh Do");
+            Console.WriteLine(Sum(5, 5));
+
+
+            Car myCar = new Car(color:"silver", model:"Bentley Bentayga", year:2025, maxSpeed:300);
+            Console.WriteLine(myCar.GetColor());
+            Console.WriteLine(myCar.GetMaxSpeed());
+            myCar.PrintProCar();
         }
 
-        static void PrintHello()
-        {
-            Console.WriteLine("Hello World!");
-        }
-
-        static void PrintRandom(string message, string defaultString = "Nguyen Cong ")
-        {
-            Console.WriteLine("Hello " + defaultString + message);
-        }
     }
+    
 }
 
