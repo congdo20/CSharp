@@ -4,10 +4,34 @@ namespace MyApp
 {
     class Car
     {
-        private string model = "BMW i8";
+        private string model = "BMW i8"; // field
+
+        public string Model // property
+        {
+            get { return model; }
+            set { model = value; }
+        }
+
         private string color = "black";
+
+        // public string Color
+        // {
+        //     get; set;
+        // } = "black";
+
+        public string Color
+        {
+            get { return color; }
+            set { color = value; }
+        }
+
         private int maxSpeed = 200;
         private int year = 2025;
+
+        // public string Model { get; set; } = "BMW i8";
+        // public string Color { get; set; } = "black";
+        // public int MaxSpeed { get; set; } = 200;
+        // public int Year { get; set; } = 2025;
 
         public Car() { }
 
@@ -19,25 +43,25 @@ namespace MyApp
             this.year = year;
         }
 
-        public string GetModel()
-        {
-            return model;
-        }
+        // public string GetModel()
+        // {
+        //     return model;
+        // }
 
-        public void SetModel(string model)
-        {
-            this.model = model;
-        }
+        // public void SetModel(string model)
+        // {
+        //     this.model = model;
+        // }
 
-        public string GetColor()
-        {
-            return color;
-        }
+        // public string GetColor()
+        // {
+        //     return color;
+        // }
 
-        public void SetColor(string color)
-        {
-            this.color = color;
-        }
+        // public void SetColor(string color)
+        // {
+        //     this.color = color;
+        // }
 
         public int GetMaxSpeed()
         {

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/trinhdo/Code/CSharp/MyApp/MyApp.csproj": {}
+    "C:\\Users\\trinhdo\\Code\\CSharp\\MyApp\\MyApp.csproj": {}
   },
   "projects": {
-    "/Users/trinhdo/Code/CSharp/MyApp/MyApp.csproj": {
+    "C:\\Users\\trinhdo\\Code\\CSharp\\MyApp\\MyApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/trinhdo/Code/CSharp/MyApp/MyApp.csproj",
+        "projectUniqueName": "C:\\Users\\trinhdo\\Code\\CSharp\\MyApp\\MyApp.csproj",
         "projectName": "MyApp",
-        "projectPath": "/Users/trinhdo/Code/CSharp/MyApp/MyApp.csproj",
-        "packagesPath": "/Users/trinhdo/.nuget/packages/",
-        "outputPath": "/Users/trinhdo/Code/CSharp/MyApp/obj/",
+        "projectPath": "C:\\Users\\trinhdo\\Code\\CSharp\\MyApp\\MyApp.csproj",
+        "packagesPath": "C:\\Users\\trinhdo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\trinhdo\\Code\\CSharp\\MyApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/trinhdo/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\trinhdo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.304/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

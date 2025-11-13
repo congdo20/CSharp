@@ -85,8 +85,10 @@ namespace MyApp
 
 
             Car myCar = new Car(color:"silver", model:"Bentley Bentayga", year:2025, maxSpeed:300);
-            Console.WriteLine(myCar.GetColor());
+            // Console.WriteLine(myCar.GetColor());
             Console.WriteLine(myCar.GetMaxSpeed());
+            myCar.Model = "Rolls - Royce";
+            Console.WriteLine(myCar.Model);
             myCar.PrintProCar();
         }
 
