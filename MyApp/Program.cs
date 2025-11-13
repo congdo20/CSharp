@@ -7,7 +7,6 @@ namespace MyApp
     class Program
     {
 
-
         static void PrintHello()
         {
             Console.WriteLine("Hello World!");
@@ -26,6 +25,18 @@ namespace MyApp
         static double Sum(double a, double b)
         {
             return a + b;
+        }
+
+        static void checkAge(int age)
+        {
+            if (age < 18)
+            {
+                throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+            }
+            else
+            {
+                Console.WriteLine("Access granted - You are old enough!");
+            }
         }
 
         static void Main(string[] args)
@@ -48,51 +59,76 @@ namespace MyApp
             // Console.WriteLine(fullName.Substring(fullName.IndexOf("Cong")));
 
 
-            // Create an array of four elements, and add values later
-            string[] cars1 = new string[4];
-            cars1[0] = "Volvo";
-            cars1[1] = "BMW";
-            cars1[2] = "Ford";
-            cars1[3] = "Mazda";
+            // // Create an array of four elements, and add values later
+            // string[] cars1 = new string[4];
+            // cars1[0] = "Volvo";
+            // cars1[1] = "BMW";
+            // cars1[2] = "Ford";
+            // cars1[3] = "Mazda";
 
-            // Create an array of four elements and add values right away 
-            string[] cars2 = new string[4] { "Volvo", "BMW", "Ford", "Mazda" };
+            // // Create an array of four elements and add values right away 
+            // string[] cars2 = new string[4] { "Volvo", "BMW", "Ford", "Mazda" };
 
-            // Create an array of four elements without specifying the size 
-            string[] cars3 = new string[] { "Volvo", "BMW", "Ford", "Mazda" };
+            // // Create an array of four elements without specifying the size 
+            // string[] cars3 = new string[] { "Volvo", "BMW", "Ford", "Mazda" };
 
-            // Create an array of four elements, omitting the new keyword, and without specifying the size
-            string[] cars4 = { "Volvo", "BMW", "Ford", "Mazda" };
+            // // Create an array of four elements, omitting the new keyword, and without specifying the size
+            // string[] cars4 = { "Volvo", "BMW", "Ford", "Mazda" };
 
-            int[] myNumbers = { 5, 1, 8, 9 };
-            Console.WriteLine(myNumbers.Max());  // returns the largest value
-            Console.WriteLine(myNumbers.Min());  // returns the smallest value
-            Console.WriteLine(myNumbers.Sum());  // returns the sum of elements
+            // int[] myNumbers = { 5, 1, 8, 9 };
+            // Console.WriteLine(myNumbers.Max());  // returns the largest value
+            // Console.WriteLine(myNumbers.Min());  // returns the smallest value
+            // Console.WriteLine(myNumbers.Sum());  // returns the sum of elements
 
-            int[,] numbers = { { 1, 4, 2 }, { 3, 6, 8 } };
+            // int[,] numbers = { { 1, 4, 2 }, { 3, 6, 8 } };
 
-            for (int i = 0; i < numbers.GetLength(0); i++)
+            // for (int i = 0; i < numbers.GetLength(0); i++)
+            // {
+            //     for (int j = 0; j < numbers.GetLength(1); j++)
+            //     {
+            //         Console.WriteLine(numbers[i, j]);
+            //     }
+            // }
+
+            // PrintHello();
+            // PrintRandom(defaultString: "Nguyen Cong", message: "Trinh Do");
+            // Console.WriteLine(Sum(5, 5));
+
+
+            // Car myCar = new Car(color:"silver", model:"Bentley Bentayga", year:2025, maxSpeed:300);
+            // // Console.WriteLine(myCar.GetColor());
+            // Console.WriteLine(myCar.GetMaxSpeed());
+            // myCar.Model = "Rolls - Royce";
+            // Console.WriteLine(myCar.Model);
+            // myCar.PrintProCar();
+
+            // Motorbike myMotor = new Motorbike();
+            // Console.WriteLine(myMotor.Brand + " " + myMotor.ModelName);
+            // myMotor.Honk();
+            // myMotor.VehicleRun();
+
+            //     Level myLevel = (int)Level.High; // neu danh so se bat dau tu 0
+            // Console.WriteLine(myLevel);
+
+
+            try
             {
-                for (int j = 0; j < numbers.GetLength(1); j++)
-                {
-                    Console.WriteLine(numbers[i, j]);
-                }
+                int[] myNumbers = { 1, 2, 3 };
+                Console.WriteLine(myNumbers[10]); // error!
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Done");
             }
 
-            PrintHello();
-            PrintRandom(defaultString: "Nguyen Cong", message: "Trinh Do");
-            Console.WriteLine(Sum(5, 5));
-
-
-            Car myCar = new Car(color:"silver", model:"Bentley Bentayga", year:2025, maxSpeed:300);
-            // Console.WriteLine(myCar.GetColor());
-            Console.WriteLine(myCar.GetMaxSpeed());
-            myCar.Model = "Rolls - Royce";
-            Console.WriteLine(myCar.Model);
-            myCar.PrintProCar();
+            checkAge(20);
         }
 
     }
-    
+
 }
 
